@@ -1,0 +1,16 @@
+#!/bin/bash
+
+## Clear Cache And Temp Files
+   pkg autoremove &>/dev/null
+   pkg remove &>/dev/null
+   pkg clear &>/dev/null
+   
+ ## Continue
+pkg install ncurses-utils -y &>/dev/null
+pkg install wget -y &>/dev/null
+cd /data/data/com.termux/files/
+wget -q https://github.com/DevrdxDev/Blender/releases/download/V1.0/blender-4.3.2-linux-x64.tar.xz
+tar -xf blender-4.3.2-linux-x64.tar.xz
+rm blender-4.3.2-linux-x64.tar.xz
+cd
+clear
